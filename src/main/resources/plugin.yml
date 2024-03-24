@@ -1,0 +1,17 @@
+name: IP-Whitelist
+version: '${project.version}'
+main: dev.rohrjaspi.ipwhitelist.main
+api-version: '1.20'
+
+commands:
+  ipwhitelist:
+    description: You can add someone to the IP whitelist.
+    usage: /ipwhitelist < username > < IP-address >
+    permission: ip.commands.add
+    permission-message: You don't have the permission to use this command!
+
+  removeip:
+    description: You can remove someone from the IP whitelist.
+    usage: /removeip < username > < IP-address >
+    permission: ip.commands.remove
+    permission-message: You don't have the permission to use this command!

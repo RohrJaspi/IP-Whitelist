@@ -5,7 +5,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class WhitelistCommand implements CommandExecutor {
@@ -18,10 +17,10 @@ public class WhitelistCommand implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		if (!(sender instanceof Player)) {
+		/*if (!(sender instanceof Player)) {
 			sender.sendMessage("This command can only be executed by players.");
 			return false;
-		}
+		}*/
 
 		if (args.length != 2) {
 			sender.sendMessage("Usage: /whitelist <playerName> <ipAddress>");

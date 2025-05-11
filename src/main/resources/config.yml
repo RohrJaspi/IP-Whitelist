@@ -1,0 +1,50 @@
+database:
+  dataSourceClassName: com.mysql.cj.jdbc.MysqlDataSource
+  url: jdbc:mysql://u25_E3mcpQl6mw:sfk!xbiZt!ka!ZMyh6Qbycwu@node-1.rohrjaspi.dev:3306/s25_TestServer
+  user: u25_E3mcpQl6mw
+  password: sfk!xbiZt!ka!ZMyh6Qbycwu
+
+##############################################################################################################
+##
+## Do not change the following values unless you know what you are doing!!!!
+##
+##############################################################################################################
+  hikari:
+    maximumPoolSize: 10
+    minimumIdle: 5
+    idleTimeout: 60000
+    maxLifetime: 1800000
+    connectionTimeout: 30000
+    cachePrepStmts: true
+    prepStmtCacheSize: 250
+    prepStmtCacheSqlLimit: 2048
+    useServerPrepStmts: true
+
+message:
+  notWhitelisted: 'Du bist nicht gewhitelisted'
+  playerNotFound: 'Dieser Spieler ist nicht gewhitelisted'
+  removeIP: 'Du hast diesen Spieler von der IP-Whitelist entfernt'
+  IPadded: 'Du hast diesen Spieler zu der IP-Whitelist hinzugefüght'
+  usage: '/ipw < add/remove/info > < username > < ip-adress >'
+  alreadyWhitelist: 'Diser Spieler ist schon auf der Whitelist.'
+  banned: 'Du bist gebannt. Du kannst ein Ticket auf Discord erstellen um entbannt zu werden.'
+
+
+### If you want to ban players if the joined in a specific amount of time with the same IP a specific amount of times, you can activate this feature here.
+settings:
+  ban_count: 3 # Amount of times a player can join with the same IP in the time frame
+  time_frame: 500 # Time frame in Seconds
+  activate_ban_count: true # Activate the feature
+
+permission:
+  staff: 'system.command.staff'
+
+
+discord:
+  enabled: false # Set to true if you want to use the Discord Bot
+  token:
+  serverID:
+  channels:
+    log:
+    request_whitelist:
+    admin:
